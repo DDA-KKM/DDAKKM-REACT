@@ -1,37 +1,14 @@
 module.exports = {
-  root: true,
+  plugins: ['prettier'],
   env: {
     browser: true,
+    es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  plugins: ['prettier', '@typescript-eslint'],
-  rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        semi: true,
-        useTabs: false,
-        tabWidth: 2,
-        printWidth: 80,
-        bracketSpacing: true,
-        arrowParens: 'avoid',
-        parser: 'flow',
-      },
-      {
-        usePrettierrc: false,
-        fileInfoOptions: {
-          withNodeModules: true,
-        },
-      },
-    ],
-  },
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   parserOptions: {
-    parser: '@typescript-eslint/parser',
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
+  rules: {},
 };
