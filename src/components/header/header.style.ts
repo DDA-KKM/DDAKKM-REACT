@@ -1,7 +1,10 @@
+/*eslint no-undef: "error"*/
+/*eslint-env browser*/
+
 import styled from 'styled-components';
 import { onNotLarge } from 'styles/mediaQueries';
 
-export const DesktopHeader = styled.div`
+export const HeaderContainer = styled.div`
   padding: 0 auto;
   display: flex;
   justify-content: center;
@@ -27,8 +30,21 @@ export const Container = styled.div`
   flex-direction: row;
   padding: 0 25px;
   justify-content: space-between;
+  width: 100%;
 `;
 
-export const Logo = styled.img`
-  width: 64px;
+export const Logo = styled.div`
+  display: flex;  
+  align-items: center;
+  img {
+    width: 64px;
+  }
+`;
+
+export const ProfileImg = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 42px;
+  }
 `;
