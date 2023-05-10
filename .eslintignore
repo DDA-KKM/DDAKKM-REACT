@@ -1,3 +1,5 @@
 node_modules
 dist
-src/hooks/useMatchScreenSize
+src/reportWebVitals.ts
+src/hooks/useMatchScreenSize.tsx
+src/MainPage/Search.tsx

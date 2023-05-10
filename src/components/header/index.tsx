@@ -1,33 +1,27 @@
+/*eslint no-undef: "error"*/
+/*eslint-env browser*/
+
 import * as S from './header.style';
 import Logo from '../../assets/header-logo.png';
-import useMatchScreenSize from 'hooks/useMatchScreenSize';
+// import useMatchScreenSize from 'hooks/useMatchScreenSize';
 
 function Header() {
-  const { isLarge } = useMatchScreenSize();
+  // const { isLarge } = useMatchScreenSize();
 
   return (
     <>
-      {isLarge ? (
-        <>
-          <S.DesktopHeader>
-            <S.Header>
-              <S.Container>
-                <S.Logo src={Logo} />
-                <div></div>
-              </S.Container>
-            </S.Header>
-          </S.DesktopHeader>
-        </>
-      ) : (
-        <>
-          <S.Header>
-            <S.Container>
-              <S.Logo src={Logo} />
-              <div></div>
-            </S.Container>
-          </S.Header>
-        </>
-      )}
+      <S.HeaderContainer>
+        <S.Header>
+          <S.Container>
+            <S.Logo>
+              <img src={Logo} alt="logo" />
+            </S.Logo>
+            <S.ProfileImg>
+              <img src={Logo} alt="logo" />
+            </S.ProfileImg>
+          </S.Container>
+        </S.Header>
+      </S.HeaderContainer>
     </>
   );
 }

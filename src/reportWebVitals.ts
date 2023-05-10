@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env browser*/
+
 import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {

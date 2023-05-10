@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env browser*/
+
 import { useMediaQuery } from 'react-responsive';
 import { findLastKey as _findLastKey } from 'lodash-es';
 import { fromPairs as _fromPairs } from 'lodash-es';
