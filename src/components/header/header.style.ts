@@ -1,11 +1,6 @@
-/*eslint no-undef: "error"*/
-/*eslint-env browser*/
-
-import styled from 'styled-components';
-import { onNotLarge } from 'styles/mediaQueries';
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  padding: 0 auto;
   display: flex;
   justify-content: center;
 `;
@@ -17,12 +12,6 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ebebeb;
-  ${onNotLarge} {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
 `;
 
 export const Container = styled.div`
@@ -34,7 +23,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.div`
-  display: flex;  
+  display: flex;
   align-items: center;
   img {
     width: 64px;

@@ -1,12 +1,13 @@
-/*eslint no-undef: "error"*/
-/*eslint-env browser*/
-
-import Search from './Search'
+import Banner from './Components/Banner'
+import Search from './Components/Search'
+import TopicList from './Components/TopicList'
 
 function MainPage() {
   return (
     <>
       <Search />
+      <Banner />
+      <TopicList />
     </>
   )
 }
