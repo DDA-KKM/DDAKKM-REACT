@@ -8,7 +8,9 @@ const TOPIC = [
 		company: '신촌 세브란스병원',
 		job: '외과 병동 간호사',
 		topic: '간호사에서 승무원이 된 이야기가 궁금하다면?',
-		desc: '안녕하세요. 저는 간호사를 하다가 승무원으로 재직한 지 8년이 되어가는 조이라고 합니다. 저의 인사이트가 궁금하시다면 따끔챗 요청을 해주세요!'
+		desc: '안녕하세요. 저는 간호사를 하다가 승무원으로 재직한 지 8년이 되어가는 조이라고 합니다. 저의 인사이트가 궁금하시다면 따끔챗 요청을 해주세요!',
+		tag: ['간호사', '승무원', '세브란스']
+
 	}
 ]
 
@@ -35,6 +37,17 @@ function TopicList() {
 								</S.UserCompany>
 							</S.UserInfo>
 						</S.Profile>
+						<S.Topic>
+							{topic.topic}
+						</S.Topic>
+						<S.Desc>
+							{topic.desc}
+						</S.Desc>
+						<S.Tag>
+							{topic.tag.map((value, idx) => (
+								<span key={idx}>{value}</span>
+							))}
+						</S.Tag>
 					</S.TopicCard>
 				))}
 				

@@ -3,6 +3,7 @@
 
 import * as S from './header.style';
 import Logo from '../../assets/header-logo.png';
+import TEST from '../../assets/testIMG.png';
 // import useMatchScreenSize from 'hooks/useMatchScreenSize';
 
 function Header() {
@@ -17,7 +18,7 @@ function Header() {
               <img src={Logo} alt="logo" />
             </S.Logo>
             <S.ProfileImg>
-              <img src={Logo} alt="logo" />
+              <img src={TEST} alt="logo" />
             </S.ProfileImg>
           </S.Container>
         </S.Header>

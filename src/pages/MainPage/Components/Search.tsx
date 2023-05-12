@@ -1,7 +1,7 @@
 import * as S from './Search.style'
 import Glass from '../../../assets/glass.png';
 
-const SEARCHTAG = ['대학원', '응급실 간호사', '태우나요?']
+const SEARCHTAG = ['대학원', '응급실 간호사', '삼성서울병원']
 
 function Search() {
 	return (

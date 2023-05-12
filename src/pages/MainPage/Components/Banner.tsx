@@ -6,8 +6,8 @@ function Banner() {
 		<S.BannerContainer>
 			<S.BannerText>
 				<p>
-					<em>간호사 면허가 있으시군요!</em><br />
-					커리어 프리셉터 등록하고 부수입을 만들어보세요!
+					<em>요즘 간호사들의 커리어 플랫폼</em><br />
+					나를 성장시키는 따끔한 조언을 들어보세요!
 				</p>
 			</S.BannerText>
 			<S.Syringe>

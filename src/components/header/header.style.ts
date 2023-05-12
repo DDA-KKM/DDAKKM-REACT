@@ -26,6 +26,7 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   img {
+    object-fit: cover;
     width: 64px;
   }
 `;
@@ -34,6 +35,8 @@ export const ProfileImg = styled.div`
   display: flex;
   align-items: center;
   img {
+    object-fit: cover;
+    border-radius: 100%;
     width: 42px;
   }
 `;
