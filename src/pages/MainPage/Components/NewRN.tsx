@@ -20,7 +20,7 @@ function NewRN() {
 			<S.NewRNWrapper>
 				{RNs.map((rn, idx)=>(
 					<S.RNCard key={idx}>
-						<S.NewTag />
+						<S.NewTag>NEW</S.NewTag>
 						<S.ProfileImg>
 							<img src={rn.profile}/>
 						</S.ProfileImg>

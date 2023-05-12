@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const TopicContainer = styled.section`
-	padding: 25px 16px;
+	padding: 25px 16px 60px 16px;
 	width: 100%;
 	max-width: 992px;
 `

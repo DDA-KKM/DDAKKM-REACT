@@ -35,6 +35,8 @@ export const RNCard = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding-top: 24px;
+	background: #FFFFFF;
+	border-radius: 12px;
 `
 
 export const NewTag = styled.span`
@@ -45,7 +47,7 @@ export const NewTag = styled.span`
 	background: #FFF388;
 	border-radius: 4px;
 	position: absolute;
-	top: 0;
+	top: -10px;
 `
 
 export const ProfileImg = styled.div`
