@@ -1,9 +1,12 @@
 import * as S from "./NewRN.style";
-import TEST from "../../../assets/Frame93.png";
 import { SwiperSlide } from "swiper/react";
 import SwiperClass from "swiper";
 import { useState } from "react";
 import useMatchScreenSize from "hooks/useMatchScreenSize";
+import TEST from "../../../assets/testIMG.png";
+import TEST2 from "../../../assets/Ellipse 30.png";
+import TEST3 from "../../../assets/Ellipse 31.png";
+import TEST4 from "../../../assets/Ellipse 33.png";
 
 const RNs = [
   {
@@ -13,7 +16,37 @@ const RNs = [
     job: "외과 병동 간호사",
   },
   {
-    profile: TEST,
+    profile: TEST2,
+    name: "조이",
+    company: "신촌 세브란스병원",
+    job: "외과 병동 간호사",
+  },
+  {
+    profile: TEST3,
+    name: "조이",
+    company: "신촌 세브란스병원",
+    job: "외과 병동 간호사",
+  },
+  {
+    profile: TEST4,
+    name: "조이",
+    company: "신촌 세브란스병원",
+    job: "외과 병동 간호사",
+  },
+  {
+    profile: TEST2,
+    name: "조이",
+    company: "신촌 세브란스병원",
+    job: "외과 병동 간호사",
+  },
+  {
+    profile: TEST3,
+    name: "조이",
+    company: "신촌 세브란스병원",
+    job: "외과 병동 간호사",
+  },
+  {
+    profile: TEST4,
     name: "조이",
     company: "신촌 세브란스병원",
     job: "외과 병동 간호사",
@@ -25,37 +58,7 @@ const RNs = [
     job: "외과 병동 간호사",
   },
   {
-    profile: TEST,
-    name: "조이",
-    company: "신촌 세브란스병원",
-    job: "외과 병동 간호사",
-  },
-  {
-    profile: TEST,
-    name: "조이",
-    company: "신촌 세브란스병원",
-    job: "외과 병동 간호사",
-  },
-  {
-    profile: TEST,
-    name: "조이",
-    company: "신촌 세브란스병원",
-    job: "외과 병동 간호사",
-  },
-  {
-    profile: TEST,
-    name: "조이",
-    company: "신촌 세브란스병원",
-    job: "외과 병동 간호사",
-  },
-  {
-    profile: TEST,
-    name: "조이",
-    company: "신촌 세브란스병원",
-    job: "외과 병동 간호사",
-  },
-  {
-    profile: TEST,
+    profile: TEST2,
     name: "조이",
     company: "신촌 세브란스병원",
     job: "외과 병동 간호사",

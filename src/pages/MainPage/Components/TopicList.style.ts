@@ -51,7 +51,8 @@ export const TopicCard = styled.div`
 export const Profile = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 7px;
+  gap: 9px;
+  height: 50px;
 `;
 
 export const ProfileImg = styled.div`
@@ -103,6 +104,8 @@ export const Topic = styled.div`
   font-size: 14px;
   line-height: 155%;
   text-align: left;
+  height: 44px;
+  word-break: keep-all;
 `;
 
 export const Desc = styled.div`
@@ -115,6 +118,7 @@ export const Desc = styled.div`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  height: 66px;
 `;
 
 export const Tag = styled.div`
