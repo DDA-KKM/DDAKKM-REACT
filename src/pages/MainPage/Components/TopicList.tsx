@@ -1,5 +1,9 @@
 import * as S from "./TopicList.style";
 import TEST from "../../../assets/Frame93.png";
+import useMatchScreenSize from "hooks/useMatchScreenSize";
+import { useState } from "react";
+import SwiperClass from "swiper";
+import { SwiperSlide } from "swiper/react";
 
 const TOPIC = [
   {
@@ -41,6 +45,17 @@ const TOPIC = [
 ];
 
 function TopicList() {
+  const [isFirstSlide, setIsFirstSlide] = useState(true);
+  const [isLastSlide, setIsLastSlide] = useState(false);
+  const [slider, setSlider] = useState<SwiperClass>();
+  const { isLarge } = useMatchScreenSize();
+
+  const handleChange = () => {
+    if (!slider) return;
+    setIsLastSlide(slider.isEnd);
+    setIsFirstSlide(slider.isBeginning);
+  };
+
   return (
     <S.TopicContainer>
       <S.TopicHeader>
@@ -49,32 +64,69 @@ function TopicList() {
         <em>간호 관련 현직자들의 개성 담긴 스토리를 확인해보세요.</em>
       </S.TopicHeader>
       <S.TopicWrapper>
-        <S.ScrollContainer>
-          {TOPIC.map((topic, idx) => (
-            <S.TopicCard key={idx}>
-              <S.Profile>
-                <S.ProfileImg>
-                  <img src={topic.profile} alt="프로필 이미지" />
-                </S.ProfileImg>
-                <S.UserInfo>
-                  <S.UserName>{topic.name} 프리셉터</S.UserName>
-                  <S.UserCompany>
-                    <span>{topic.company}</span>
-                    <em>|</em>
-                    <em>{topic.job}</em>
-                  </S.UserCompany>
-                </S.UserInfo>
-              </S.Profile>
-              <S.Topic>{topic.topic}</S.Topic>
-              <S.Desc>{topic.desc}</S.Desc>
-              <S.Tag>
-                {topic.tag.map((value, idx) => (
-                  <span key={idx}>{value}</span>
-                ))}
-              </S.Tag>
-            </S.TopicCard>
-          ))}
-        </S.ScrollContainer>
+        {isLarge ? (
+          <S.SlideContainer
+            slidesPerView="auto"
+            onSwiper={setSlider}
+            onTransitionEnd={handleChange}
+          >
+            {TOPIC.map((topic, idx) => (
+              <SwiperSlide key={idx}>
+                <S.TopicCard>
+                  <S.Profile>
+                    <S.ProfileImg>
+                      <img src={topic.profile} alt="프로필 이미지" />
+                    </S.ProfileImg>
+                    <S.UserInfo>
+                      <S.UserName>{topic.name} 프리셉터</S.UserName>
+                      <S.UserCompany>
+                        <span>{topic.company}</span>
+                        <em>|</em>
+                        <em>{topic.job}</em>
+                      </S.UserCompany>
+                    </S.UserInfo>
+                  </S.Profile>
+                  <S.Topic>{topic.topic}</S.Topic>
+                  <S.Desc>{topic.desc}</S.Desc>
+                  <S.Tag>
+                    {topic.tag.map((value, idx) => (
+                      <span key={idx}>{value}</span>
+                    ))}
+                  </S.Tag>
+                </S.TopicCard>
+              </SwiperSlide>
+            ))}
+          </S.SlideContainer>
+        ) : (
+          <>
+            <S.ScrollContainer>
+              {TOPIC.map((topic, idx) => (
+                <S.TopicCard key={idx}>
+                  <S.Profile>
+                    <S.ProfileImg>
+                      <img src={topic.profile} alt="프로필 이미지" />
+                    </S.ProfileImg>
+                    <S.UserInfo>
+                      <S.UserName>{topic.name} 프리셉터</S.UserName>
+                      <S.UserCompany>
+                        <span>{topic.company}</span>
+                        <em>|</em>
+                        <em>{topic.job}</em>
+                      </S.UserCompany>
+                    </S.UserInfo>
+                  </S.Profile>
+                  <S.Topic>{topic.topic}</S.Topic>
+                  <S.Desc>{topic.desc}</S.Desc>
+                  <S.Tag>
+                    {topic.tag.map((value, idx) => (
+                      <span key={idx}>{value}</span>
+                    ))}
+                  </S.Tag>
+                </S.TopicCard>
+              ))}
+            </S.ScrollContainer>
+          </>
+        )}
       </S.TopicWrapper>
     </S.TopicContainer>
   );

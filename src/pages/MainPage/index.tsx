@@ -1,9 +1,9 @@
-import Banner from './Components/Banner'
-import Chat from './Components/Chat'
-import NewRN from './Components/NewRN'
-import Search from './Components/Search'
-import TopicList from './Components/TopicList'
-import styled from 'styled-components'
+import Banner from "./Components/Banner";
+import Chat from "./Components/Chat";
+import NewRN from "./Components/NewRN";
+import Search from "./Components/Search";
+import TopicList from "./Components/TopicList";
+import styled from "styled-components";
 
 export const Container = styled.section`
   display: flex;
@@ -11,7 +11,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 auto;
-`
+`;
 
 function MainPage() {
   return (
@@ -22,7 +22,7 @@ function MainPage() {
       <TopicList />
       <NewRN />
     </Container>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;

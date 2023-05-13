@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Swiper } from "swiper/react";
+import { onNotLarge } from "styles/mediaQueries";
 
 export const TopicContainer = styled.section`
   padding: 25px 16px 60px 16px;
@@ -21,20 +23,23 @@ export const TopicHeader = styled.div`
 
 export const TopicWrapper = styled.div`
   width: 100%;
-  overflow-x: scroll;
+  overflow: hidden;
   &::-webkit-scrollbar {
     background: none;
+  }
+  ${onNotLarge} {
+    overflow-x: scroll;
   }
 `;
 
 export const ScrollContainer = styled.div`
-  width: 1100px;
+  width: 1150px;
   display: flex;
   gap: 18px;
 `;
 
 export const TopicCard = styled.div`
-  width: 274px;
+  width: 274px !important;
   height: 277px;
   border: #e6e6e6 1px solid;
   padding: 18px 16px;
@@ -116,5 +121,20 @@ export const Tag = styled.div`
     background: rgba(57, 132, 244, 0.1);
     border-radius: 4px;
     color: #3984f4;
+  }
+`;
+
+export const SlideContainer = styled(Swiper)`
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 10px;
+  .swiper-wrapper {
+    display: -webkit-inline-box;
+    width: 100%;
+  }
+  .swiper-slide {
+    display: flex;
+    width: 292px !important;
   }
 `;
