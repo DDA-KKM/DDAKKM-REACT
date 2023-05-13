@@ -79,11 +79,11 @@ function TopicList() {
                     </S.ProfileImg>
                     <S.UserInfo>
                       <S.UserName>{topic.name} 프리셉터</S.UserName>
-                      <S.UserCompany>
-                        <span>{topic.company}</span>
+                      <S.UserCareer>
+                        <S.UserCompany>{topic.company}</S.UserCompany>
                         <em>|</em>
-                        <em>{topic.job}</em>
-                      </S.UserCompany>
+                        <S.UserJob>{topic.job}</S.UserJob>
+                      </S.UserCareer>
                     </S.UserInfo>
                   </S.Profile>
                   <S.Topic>{topic.topic}</S.Topic>
@@ -108,11 +108,11 @@ function TopicList() {
                     </S.ProfileImg>
                     <S.UserInfo>
                       <S.UserName>{topic.name} 프리셉터</S.UserName>
-                      <S.UserCompany>
-                        <span>{topic.company}</span>
+                      <S.UserCareer>
+                        <S.UserCompany>{topic.company}</S.UserCompany>
                         <em>|</em>
-                        <em>{topic.job}</em>
-                      </S.UserCompany>
+                        <S.UserJob>{topic.job}</S.UserJob>
+                      </S.UserCareer>
                     </S.UserInfo>
                   </S.Profile>
                   <S.Topic>{topic.topic}</S.Topic>

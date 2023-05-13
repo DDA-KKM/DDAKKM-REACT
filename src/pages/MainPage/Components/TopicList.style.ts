@@ -3,7 +3,7 @@ import { Swiper } from "swiper/react";
 import { onNotLarge } from "styles/mediaQueries";
 
 export const TopicContainer = styled.section`
-  padding: 25px 16px 60px 16px;
+  padding: 25px 0 60px 0;
   width: 100%;
   max-width: 992px;
 `;
@@ -13,6 +13,7 @@ export const TopicHeader = styled.div`
   font-size: 20px;
   text-align: left;
   margin-bottom: 24px;
+  padding: 0 16px;
   em {
     font-weight: 500;
     font-size: 14px;
@@ -24,6 +25,7 @@ export const TopicHeader = styled.div`
 export const TopicWrapper = styled.div`
   width: 100%;
   overflow: hidden;
+  padding: 0 16px;
   &::-webkit-scrollbar {
     background: none;
   }
@@ -71,25 +73,33 @@ export const UserName = styled.div`
   text-align: left;
 `;
 
-export const UserCompany = styled.div`
+export const UserCareer = styled.div`
+  text-align: left;
+
+  em {
+    margin-left: 7px;
+    color: #e4e6e9;
+  }
+`;
+
+export const UserCompany = styled.span`
   font-weight: 600;
   font-size: 12px;
   line-height: 160%;
   color: #777a82;
-  text-align: left;
+`;
 
-  em {
-    margin-left: 8px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 160%;
-    color: #777a82;
-  }
+export const UserJob = styled.span`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #777a82;
+  margin-left: 7px;
 `;
 
 export const Topic = styled.div`
   margin-top: 16px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 155%;
   text-align: left;
@@ -128,7 +138,8 @@ export const SlideContainer = styled(Swiper)`
   height: auto;
   width: 100%;
   flex-direction: row;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+
   .swiper-wrapper {
     display: -webkit-inline-box;
     width: 100%;

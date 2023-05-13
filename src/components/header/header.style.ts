@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -35,6 +35,7 @@ export const ProfileImg = styled.div`
   display: flex;
   align-items: center;
   img {
+    border: 1px solid #dfdfdf;
     object-fit: cover;
     border-radius: 100%;
     width: 42px;

@@ -3,7 +3,7 @@ import { Swiper } from "swiper/react";
 import { onNotLarge } from "styles/mediaQueries";
 
 export const NewRNContainer = styled.section`
-  padding: 60px 16px;
+  padding: 60px 0;
   width: 100%;
   max-width: 992px;
   background: #f8f8fa;
@@ -14,6 +14,7 @@ export const NewRNHeading = styled.div`
   font-size: 20px;
   line-height: 140%;
   text-align: left;
+  padding: 0 16px;
 
   em {
     font-weight: 500;
@@ -86,6 +87,7 @@ export const NewRNWrapper = styled.div`
   gap: 12px;
   align-items: center;
   overflow-x: hidden;
+  padding: 0 16px;
   ${onNotLarge} {
     overflow-x: scroll;
   }
