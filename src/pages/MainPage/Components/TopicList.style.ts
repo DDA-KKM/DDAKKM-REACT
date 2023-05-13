@@ -91,6 +91,7 @@ export const UserCompany = styled.span`
   font-size: 12px;
   line-height: 160%;
   color: #777a82;
+  white-space: nowrap;
 `;
 
 export const UserJob = styled.span`
@@ -99,6 +100,7 @@ export const UserJob = styled.span`
   line-height: 160%;
   color: #777a82;
   margin-left: 7px;
+  white-space: nowrap;
 `;
 
 export const Topic = styled.div`
