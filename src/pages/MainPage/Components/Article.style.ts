@@ -4,6 +4,7 @@ export const ArticleContainer = styled.section`
   padding: 36px 16px 60px 16px;
   width: 100%;
   max-width: 992px;
+  background-color: white;
 `;
 
 export const ArticleHeader = styled.div`
