@@ -1,3 +1,4 @@
+import Article from "./Components/Article";
 import Banner from "./Components/Banner";
 import Chat from "./Components/Chat";
 import NewRN from "./Components/NewRN";
@@ -19,6 +20,7 @@ function MainPage() {
       <Search />
       <Banner />
       <Chat />
+      <Article />
       <TopicList />
       <NewRN />
     </Container>
