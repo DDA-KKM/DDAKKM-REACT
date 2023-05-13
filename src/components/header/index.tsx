@@ -1,13 +1,8 @@
-/*eslint no-undef: "error"*/
-/*eslint-env browser*/
-
 import * as S from "./header.style";
 import Logo from "../../assets/header-logo.png";
 import TEST from "../../assets/testIMG.png";
-// import useMatchScreenSize from 'hooks/useMatchScreenSize';
 
 function Header() {
-  // const { isLarge } = useMatchScreenSize();
 
   return (
     <>
