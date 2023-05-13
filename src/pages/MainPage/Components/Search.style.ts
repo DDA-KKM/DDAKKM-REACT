@@ -26,6 +26,7 @@ export const SearchBar = styled.input`
   border: none;
   padding-left: 45px;
   box-sizing: border-box;
+  font-size: 14px;
   ::placeholder {
     font-size: 14px;
   }
