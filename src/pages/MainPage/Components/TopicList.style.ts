@@ -61,6 +61,7 @@ export const ProfileImg = styled.div`
     width: 48px;
     height: 48px;
     object-fit: cover;
+    border: 1px #dfdfdf solid;
   }
 `;
 
@@ -76,6 +77,8 @@ export const UserName = styled.div`
 
 export const UserCareer = styled.div`
   text-align: left;
+  display: flex;
+  align-items: center;
 
   em {
     margin-left: 7px;
