@@ -1,10 +1,20 @@
 import styled from "styled-components";
 
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 auto;
+`;
+
 export const FooterContainer = styled.footer`
-  padding: 50px 16px 40px 16px;
   border-top: 1px solid #f4f4f4;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 0 auto;
   width: 100%;
 `
 
@@ -15,6 +25,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 992px;
+  padding: 50px 0;
 `
 
 export const Link = styled.div`
