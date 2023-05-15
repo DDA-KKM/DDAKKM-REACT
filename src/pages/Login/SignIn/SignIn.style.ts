@@ -87,7 +87,7 @@ export const SignUp2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 47px 20px 150px 20px;
+  padding: 57px 20px 150px 20px;
 `
 
 
@@ -157,6 +157,7 @@ export const NickNameWrapper = styled.div`
   width: 334px;
   text-align: left;
   margin-bottom: 18px;
+  line-height: 18px;
 `
 
 export const InputWrapper = styled.div`
@@ -164,7 +165,7 @@ export const InputWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 7px;
-  margin-bottom: 35px;
+  margin-bottom: 46px;
 `
 
 export const NickNameInput = styled.input`
