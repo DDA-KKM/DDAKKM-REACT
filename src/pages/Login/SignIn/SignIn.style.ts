@@ -81,12 +81,31 @@ export const SignUp1 = styled.div`
   padding: 63px 20px 150px 20px;
 `
 
+export const SignUp2 = styled.div`
+  width: 100%;
+  max-width: 992px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 47px 20px 150px 20px;
+`
+
+
 export const Heading1 = styled.div`
   width: 334px;
   font-weight: 700;
   font-size: 28px;
   line-height: 42px;
   text-align: left;
+`
+
+export const Heading2 = styled.div`
+  width: 334px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: left;
+  margin-bottom: 24px;
 `
 
 export const UserTypeWrapper = styled.div`
@@ -130,4 +149,79 @@ export const NextButton = styled.button<{ isClicked: boolean }>`
     font-size: 18px;
     color: #FFFFFF;
   }
+`
+
+export const NickNameWrapper = styled.div`
+  font-weight: 500;
+  font-size: 15px;
+  width: 334px;
+  text-align: left;
+  margin-bottom: 18px;
+`
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 35px;
+`
+
+export const NickNameInput = styled.input`
+  width: 235px;
+  height: 54px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
+  padding-left: 15px;
+  ::placeholder {
+    color: #C7C7C7;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 70px;
+  }
+`
+
+export const CheckButton = styled.button`
+  width: 92px;
+  height: 54px;
+  background: #000000;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 70px;
+    color: #FFFFFF;
+  }
+`
+
+export const JobInput = styled.input`
+  width: 334px;
+  height: 54px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
+  padding-left: 15px;
+  ::placeholder {
+    color: #C7C7C7;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 70px;
+  }
+`
+
+export const JobDesc = styled.div`
+  width: 334px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #B3B3B3;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 74px;
 `

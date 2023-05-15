@@ -24,7 +24,6 @@ function SignUpType({userType, setUserType, nextPage} : Props) {
   }
 
   return(
-    <S.Container>
       <S.SignUp1>
         <S.Heading1>
           반가워요! <br />
@@ -48,7 +47,6 @@ function SignUpType({userType, setUserType, nextPage} : Props) {
           <span>다음</span>
         </S.NextButton>
       </S.SignUp1>
-    </S.Container>
   )
 }
 

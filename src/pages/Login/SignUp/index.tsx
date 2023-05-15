@@ -1,5 +1,7 @@
+import * as S from './SignUp.style'
 import { useState } from "react"
 import SignUpType from "./SignUpType"
+import SignUpInfo from "./SignUpInfo"
 
 function SignUp() {
 
@@ -10,14 +12,20 @@ function SignUp() {
   }
 
   return (
-    <>
+    <S.Container>
       {page === 0 && 
         <SignUpType
           userType={userType}
           setUserType={setUserType}
           nextPage={nextPage}
         />}
-    </>
+      {page === 1 && 
+        <SignUpInfo 
+          nextPage={nextPage}
+        />
+      }
+      
+    </S.Container>
   )
 }
 
