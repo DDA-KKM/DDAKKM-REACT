@@ -14,8 +14,9 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 auto;
+  padding: 0 16px;
   width: 100%;
+  margin-top: 20px;
 `
 
 export const Wrapper = styled.div`

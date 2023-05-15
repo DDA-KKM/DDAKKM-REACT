@@ -27,6 +27,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   img {
     object-fit: cover;
     width: 64px;
@@ -36,6 +37,7 @@ export const Logo = styled.div`
 export const ProfileImg = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   img {
     border: 1px solid #dfdfdf;
     object-fit: cover;
