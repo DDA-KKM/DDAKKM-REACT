@@ -61,13 +61,73 @@ export const Login = styled.button`
   border-radius: 3px;
   border: none;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
   cursor: pointer;
   span {
     font-weight: 700;
     font-size: 18px;
     line-height: 74px;
+  }
+`
+
+export const SignUp1 = styled.div`
+  width: 100%;
+  max-width: 992px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 63px 20px 150px 20px;
+`
+
+export const Heading1 = styled.div`
+  width: 334px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: left;
+`
+
+export const UserTypeWrapper = styled.div`
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 70px;
+`
+
+export const UserType = styled.button<{ isClicked: boolean }>`
+  width: 334px;
+  height: 57px;
+  background: ${({ isClicked }) => (isClicked ? ' #E6F0FF;' : '#F9F9F9;')};
+  border: ${({ isClicked }) => (isClicked ? '1px solid #3984F4;' : '1px solid #E7E7E7;')};  
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 15px;
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 70px;
+  }
+`
+
+export const NextButton = styled.button<{ isClicked: boolean }>`
+  width: 334px;
+  height: 57px;
+  background: ${({ isClicked }) => (isClicked ? ' #3984F4;' : '#C7C7C7;')};
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
   }
 `

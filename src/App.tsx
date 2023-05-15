@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "components/header";
 import Footer from "components/footer";
 import SignIn from "pages/Login/SignIn";
+import SignUp from "pages/Login/SignUp";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
       <Footer />
