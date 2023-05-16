@@ -191,6 +191,25 @@ export const InputWrapper = styled.div`
   align-items: center;
   gap: 7px;
   margin-bottom: 46px;
+  position: relative;
+`
+
+export const ValidResult = styled.span`
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+  color: blue;
+  top: 60px;
+  left: 8px;
+`
+
+export const InValidResult = styled.span`
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+  color: red;
+  top: 60px;
+  left: 8px;
 `
 
 export const NickNameInput = styled.input`

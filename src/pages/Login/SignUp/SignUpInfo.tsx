@@ -14,11 +14,13 @@ function SignUpInfo({nextPage, userType, nickname, setNickname, job, setJob}: Pr
 
   const [isValid, setIsValid] = useState<boolean>(false)
   const [isNicknameValid, setIsNicknameValid] = useState<boolean>(false);
+  const [isNicknameChecked, setIsNicknameChecked] = useState<boolean>(false);
 
-   // Function to handle nickname input change
-   const handleNicknameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  // Function to handle nickname input change
+  const handleNicknameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNickname(event.target.value);
     setIsNicknameValid(false);
+    setIsNicknameChecked(false);
   };
 
   // Function to handle job input change
@@ -28,8 +30,8 @@ function SignUpInfo({nextPage, userType, nickname, setNickname, job, setJob}: Pr
     }
   };
 
-  // Function to check nickname validity
-  const checkNicknameValidity = () => {
+   // Function to check nickname validity
+   const checkNicknameValidity = () => {
     // Simulating a server request to check nickname validity
     // Replace this with your actual logic to check nickname uniqueness
     const isNicknameUnique = true;
@@ -38,9 +40,11 @@ function SignUpInfo({nextPage, userType, nickname, setNickname, job, setJob}: Pr
       setIsNicknameValid(true);
     } else {
       setIsNicknameValid(false);
-      // Show an error message or perform other actions if needed
     }
+
+    setIsNicknameChecked(true);
   };
+
 
   // Set the initial job value based on the previous page response
   useEffect(() => {
@@ -49,6 +53,8 @@ function SignUpInfo({nextPage, userType, nickname, setNickname, job, setJob}: Pr
       setJob('간호학생');
     }
   }, [userType]);
+
+  console.log(isNicknameValid)
 
 
 
@@ -69,6 +75,12 @@ function SignUpInfo({nextPage, userType, nickname, setNickname, job, setJob}: Pr
         <S.CheckButton onClick={checkNicknameValidity}>
           <span>중복 확인</span>
         </S.CheckButton>
+        {isNicknameChecked && !isNicknameValid && nickname.length > 0 && (
+          <S.InValidResult>중복된 닉네임이에요. 🥲 다른 닉네임을 정해주세요.</S.InValidResult>
+        )}
+        {isNicknameChecked && isNicknameValid && nickname.length > 0 && (
+          <S.ValidResult>멋진 이름이네요!</S.ValidResult>
+        )}
       </S.InputWrapper>
       <S.NickNameWrapper>
         직업/직함
