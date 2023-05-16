@@ -6,7 +6,7 @@ import SignUpFav from './SignUpFav'
 
 function SignUp() {
 
-  const [page, setPage] = useState<number>(2)
+  const [page, setPage] = useState<number>(0)
   const [userType, setUserType] = useState<string>('')
   const nextPage = () => {
     setPage(page + 1)

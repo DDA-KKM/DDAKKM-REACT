@@ -1,7 +1,11 @@
 import React from "react"
 import * as S from './SignIn.style'
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+
+  const navigate = useNavigate()
+
   return (
     <S.Container>
       <S.Wrapper>
@@ -14,7 +18,9 @@ function SignIn() {
           <span>SNS 계정으로 로그인</span>
           <S.Hr />
         </S.LoginDesc>
-        <S.Login>
+        <S.Login
+          onClick={()=>{navigate('/signup')}}  
+        >
           <span>카카오로 시작하기</span>
         </S.Login>
       </S.Wrapper>

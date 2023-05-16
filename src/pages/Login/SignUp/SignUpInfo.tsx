@@ -33,7 +33,7 @@ function SignUpInfo({nextPage}: Props) {
         />
         <S.JobDesc>
           *직업 정보는 프로필 표시 용도로 활용됩니다. <br />
-          예시)RN, 서울병원 응급실 간호사 등
+          예시)RN, 응급실 간호사 등
         </S.JobDesc>
         <S.NextButton
           isClicked={isValid}
