@@ -90,6 +90,14 @@ export const SignUp2 = styled.div`
   padding: 57px 20px 150px 20px;
 `
 
+export const SignUp3 = styled.div`
+  width: 100%;
+  max-width: 992px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 87px 20px 150px 20px;
+`
 
 export const Heading1 = styled.div`
   width: 334px;
@@ -106,6 +114,23 @@ export const Heading2 = styled.div`
   line-height: 42px;
   text-align: left;
   margin-bottom: 24px;
+`
+
+export const Heading3 = styled.div`
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  em {
+    color: #3984F4;
+  }
+`
+
+export const Desc3 = styled.div`
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #646464;
+  margin-top: 6px;
 `
 
 export const UserTypeWrapper = styled.div`
@@ -225,4 +250,34 @@ export const JobDesc = styled.div`
   text-align: left;
   margin-top: 15px;
   margin-bottom: 74px;
+`
+
+export const FavWrapper = styled.div`
+  margin-top: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 100px;
+`
+
+export const Fav = styled.button<{isClicked: boolean}>`
+  background: #F9F9F9;
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  background: ${({ isClicked }) => (isClicked ? ' #E6F0FF;' : '#F9F9F9;')};
+  border: ${({ isClicked }) => (isClicked ? '1px solid #3984F4;' : '1px solid #E7E7E7;')};  
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px
+  }
+
 `

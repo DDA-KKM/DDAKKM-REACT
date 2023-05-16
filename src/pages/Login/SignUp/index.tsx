@@ -2,10 +2,11 @@ import * as S from './SignUp.style'
 import { useState } from "react"
 import SignUpType from "./SignUpType"
 import SignUpInfo from "./SignUpInfo"
+import SignUpFav from './SignUpFav'
 
 function SignUp() {
 
-  const [page, setPage] = useState<number>(0)
+  const [page, setPage] = useState<number>(2)
   const [userType, setUserType] = useState<string>('')
   const nextPage = () => {
     setPage(page + 1)
@@ -24,7 +25,10 @@ function SignUp() {
           nextPage={nextPage}
         />
       }
-      
+      {page === 2 &&
+        <SignUpFav
+        />
+      }
     </S.Container>
   )
 }
