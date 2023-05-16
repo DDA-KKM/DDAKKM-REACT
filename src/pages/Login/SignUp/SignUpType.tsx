@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import * as S from '../SignIn/SignIn.style'
 
-const TYPE = ['현재 간호사 면허가 있어요.','간호학과 학생이에요.','간호학과를 지망하거나 다른 일을 하고 있어요.']
+const TYPE = [
+  {desc: '현재 간호사 면허가 있어요.', value: 'RN'},
+  {desc: '간호학과 학생이에요.', value: 'SN'},
+  {desc: '간호학과를 지망하거나 다른 일을 하고 있어요.', value: 'NOT'},
+]
 
 interface Props {
   userType: string;
@@ -31,11 +35,11 @@ function SignUpType({userType, setUserType, nextPage} : Props) {
         </S.Heading1>
         <S.UserTypeWrapper>
           {TYPE.map((job, idx) => (
-            <S.UserType key={idx} isClicked={userType === job}
+            <S.UserType key={idx} isClicked={userType === job.value}
               onClick={()=>{
-                handleUserTypeClick(job)
+                handleUserTypeClick(job.value)
             }}>
-              <span>{job}</span>
+              <span>{job.desc}</span>
             </S.UserType>
           ))}
         </S.UserTypeWrapper>

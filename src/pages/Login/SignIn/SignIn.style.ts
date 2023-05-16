@@ -217,6 +217,7 @@ export const CheckButton = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
 
   span {
     font-weight: 500;

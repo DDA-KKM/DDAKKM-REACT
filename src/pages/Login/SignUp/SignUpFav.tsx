@@ -3,9 +3,12 @@ import { useState } from 'react'
 
 const FAVORITE = ['임상간호', '공무원', '해외 취업', '헬스케어', '탈임상', '대학원', '국가고시', '스타트업']
 
-function SignUpFav() {
+interface Props {
+	selected: string[]
+	setSelected: React.Dispatch<React.SetStateAction<string[]>>
+}
 
-	const [selected, setSelected] = useState<string[]>([]); // 선택된 버튼들의 인덱스를 저장하는 배열
+function SignUpFav({selected, setSelected}: Props) {
 
 	// 버튼 클릭 시 상태 토글
 	const handleButtonClick = (value: string) => {
@@ -23,7 +26,7 @@ function SignUpFav() {
 			<S.Heading3>
 				<em>관심있는 분야</em>를 알려주세요
 			</S.Heading3>
-			<S.Desc3>도움이 되는 정보를 알려드릴게요</S.Desc3>
+			<S.Desc3>도움이 되는 정보를 알려드릴게요.</S.Desc3>
 			<S.FavWrapper>
 				{FAVORITE.map((fav, idx) => (
 					<S.Fav 
