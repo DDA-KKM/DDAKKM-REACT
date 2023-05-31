@@ -6,6 +6,16 @@ function SignIn() {
 
   const navigate = useNavigate()
 
+  const handleOnClick = () => {
+    const clientId = process.env.REACT_APP_KAKAO_OAUTH_KEY;
+    const redirectUri = "http://localhost:3000/user/oauth2/kakao";
+    const responseType = "code";
+  
+    const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`;
+  
+    window.location.href = url;
+  };
+
   return (
     <S.Container>
       <S.Wrapper>
@@ -19,7 +29,7 @@ function SignIn() {
           <S.Hr />
         </S.LoginDesc>
         <S.Login
-          onClick={()=>{navigate('/signup')}}  
+          onClick={handleOnClick}  
         >
           <span>카카오로 시작하기</span>
         </S.Login>
