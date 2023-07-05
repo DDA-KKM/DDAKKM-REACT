@@ -13,7 +13,7 @@ function Oauth() {
     const code = queryParams.get("code");
 
     axios
-      .get("http://api.ddakkm.com/user/oauth2/kakao", {
+      .get("https://api.ddakkm.com/user/oauth2/kakao", {
         params: code,
         headers: {
           "Access-Control-Allow-Origin": "*",
