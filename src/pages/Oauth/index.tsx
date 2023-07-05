@@ -30,7 +30,7 @@ function Oauth() {
           console.log(rsp.data.type);
           console.log(rsp.data.url);
           console.log("여기로 가보자고!!");
-          navigate(rsp.data.url);
+          window.location.href = rsp.data.url;
         }
       })
       .catch((err) => {
