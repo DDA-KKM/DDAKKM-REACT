@@ -9,9 +9,7 @@ function SignIn() {
     const clientId = process.env.REACT_APP_KAKAO_OAUTH_KEY;
     const redirectUri = process.env.REACT_APP_KAKAO_OAUTH_REDIRECT;
     const responseType = "code";
-
     const url = `https://kauth.kakao.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`;
-
     window.location.href = url;
   };
 
