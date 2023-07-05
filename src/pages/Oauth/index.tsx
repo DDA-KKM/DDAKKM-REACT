@@ -2,6 +2,11 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+interface OAUTH {
+  type: "SIGNUP" | "LOGIN";
+  url: string;
+}
+
 function Oauth() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -13,7 +18,7 @@ function Oauth() {
     const code = queryParams.get("code");
 
     axios
-      .get("https://api.ddakkm.com/user/oauth2/kakao", {
+      .get<OAUTH>("https://api.ddakkm.com/user/oauth2/kakao", {
         params: { code: code },
         headers: {
           "Access-Control-Allow-Origin": "*",
@@ -21,7 +26,11 @@ function Oauth() {
         withCredentials: true,
       })
       .then((rsp) => {
-        console.log(rsp);
+        if (rsp.data.type) {
+          console.log(rsp.data.type);
+          console.log(rsp.data.url);
+          console.log("여기로 가보자고!!");
+        }
       })
       .catch((err) => {
         console.log(err);
