@@ -14,7 +14,7 @@ function Oauth() {
 
     axios
       .get("https://api.ddakkm.com/user/oauth2/kakao", {
-        params: code,
+        params: { code: code },
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
